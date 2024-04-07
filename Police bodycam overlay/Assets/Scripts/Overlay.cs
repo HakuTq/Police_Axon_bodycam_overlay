@@ -94,9 +94,36 @@ public class E : MonoBehaviour
         }
 
         DateTime timeNow = DateTime.Now;
-        string timeHour = timeNow.Hour.ToString();
-        string timeMinute = timeNow.Minute.ToString();
-        string timeSecond = timeNow.Second.ToString();
+        string timeHour = "";
+        string timeMinute = "";
+        string timeSecond = "";
+        if (timeNow.Hour >= 10)
+        {
+            timeSecond = timeNow.Hour.ToString();
+        }
+        else
+        {
+            timeSecond = "0" + timeNow.Hour.ToString();
+        }
+
+        if (timeNow.Minute >=10)
+        {
+            timeSecond = timeNow.Minute.ToString();
+        }
+        else
+        {
+            timeSecond = "0" + timeNow.Minute.ToString();
+        }
+
+        if (timeNow.Minute >=10)
+        {
+            timeSecond = timeNow.Second.ToString();
+        }
+        else
+        {
+            timeSecond = "0" + timeNow.Second.ToString();
+        }
+        
         date.text = dateYear + "-" + dateMonth + "-" + dateDay;
         time.text = timeHour + ":" + timeMinute + ":" + timeSecond;
     }
