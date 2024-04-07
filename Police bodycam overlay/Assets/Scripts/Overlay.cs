@@ -99,23 +99,23 @@ public class E : MonoBehaviour
         string timeSecond = "";
         if (timeNow.Hour >= 10)
         {
-            timeSecond = timeNow.Hour.ToString();
+            timeHour = timeNow.Hour.ToString();
         }
         else
         {
-            timeSecond = "0" + timeNow.Hour.ToString();
+            timeHour = "0" + timeNow.Hour.ToString();
         }
 
         if (timeNow.Minute >=10)
         {
-            timeSecond = timeNow.Minute.ToString();
+            timeMinute = timeNow.Minute.ToString();
         }
         else
         {
-            timeSecond = "0" + timeNow.Minute.ToString();
+            timeMinute = "0" + timeNow.Minute.ToString();
         }
 
-        if (timeNow.Minute >=10)
+        if (timeNow.Second >=10)
         {
             timeSecond = timeNow.Second.ToString();
         }
